@@ -198,8 +198,8 @@
     
     The current tree is that, what’s currently on the screen, so it makes sense that React can’t make a change to it, because it could result in an inconsistent UI and all sorts of inconveniences. React instead makes changes to the work in progress tree, it simply swaps pointers at the very end. Now workInProgress becomes a current tree, and the current tree is the workInProgress tree.!
     
-    [Alt text](../Images/react-fiber.jpg)
-
+    ![Alt text](../Images/react-fiber.jpg)
+    
 9.  **Why we need keys in React? When do we need keys in React?**
 
     1.  We need keys in React, specially while we render a list. Unique key is mandatory and moreover it is a best practice to add a key for all the objects in the list while mapping.
