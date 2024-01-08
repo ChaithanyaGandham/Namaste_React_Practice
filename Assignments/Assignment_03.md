@@ -1,6 +1,6 @@
 # E3: Laying the Foundation!
 
-1.  What is JSX ?
+1.  **What is JSX ?**
 
     JSX is JavaScript XML or HTML like syntax.
     JSX was a combination of JavaScript and HTML.
@@ -23,7 +23,7 @@
 
     JS Object is not understandable by the browser, so to make it understand, Parcel has a dependency BABEL, which will convert the JSX code to HTML Browser Understandable code which JS Engine understands and shows it in the web browser.
 
-2.  Super Powers of JSX ?
+2.  **Super Powers of JSX ?**
 
     1.  JSX - JavaScript XML.
     2.  JSX provides user friendly coding standard at the industry level for coding react.
@@ -105,7 +105,7 @@
 
         7. JSX can execute an JS code or JS expressions inside the {} curly braces.
 
-3.  Role of type attribute in script tag ? What options can I use there ?
+3.  **Role of type attribute in script tag ? What options can I use there ?**
 
     1.  type attribute is used to specify about the content placed inside the scripts tags.
 
@@ -125,7 +125,7 @@
 
         If we want the application to be executed in the older versions of the browsers then we can specify its type as nomodule.
 
-4.  {TitleComponent} vs {<TitleComponent />} vs {<TitleComponent></TitleComponent>} in JSX ?
+4.  **{TitleComponent} vs {<TitleComponent />} vs {<TitleComponent></TitleComponent>} in JSX ?**
 
     Let us create a functional component in react using the name TitleComponent as specified.
 
@@ -143,7 +143,7 @@
         const tileElement = (
             <h1>
                 Hi I am a React Element!
-                {TitleComponent}  --> 1
+                {TitleComponent()}  --> 1
                 {<TitleComponent></TitleComponent>} --> 2
             </h1>
         )
