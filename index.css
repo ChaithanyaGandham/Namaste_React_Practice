@@ -1,0 +1,124 @@
+.logo {
+    height: 5rem;
+    border-radius: 15px;
+}
+
+.cart {
+    height: 30px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+    background: #c8bbee;
+    /* position: fixed;
+    width: 100%;
+    top: 0; */
+}
+
+.logo-container {
+    padding: 5px 0px 5px 10px;
+}
+
+.nav-items {
+    padding: 0px 20px;
+}
+
+.nav-items > ul {
+    display: flex;
+    list-style-type: none;
+    font-size: 20px;
+}
+
+.nav-items > ul > li {
+    margin: 5px;
+    padding: 5px;
+    color: rgba(2, 6, 12, 0.75);
+    font-style: italic;
+    font-weight: 600;
+}
+
+h3 {
+    font-style: italic;
+}
+
+.nav-items > ul > li:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.food-logo {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.food-item {
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    width: 300px;
+}
+
+.body-header {
+    display: flex;
+    border-radius: 5px;
+    padding: 10px 0px;
+    background: linear-gradient(0deg, rgb(201, 188, 244) 0%, rgb(255, 255, 255) 95.83%);
+    justify-content: space-around;
+}
+
+.header-text {
+    color: darkmagenta;
+    font-size: 41px;
+    display: flex;
+    align-items: center;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.restaurant-img {
+    width: 250px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.restaurant-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0px 60px;
+    justify-content: space-around;
+}
+
+.restaurant-img:hover {
+    cursor: pointer;
+    width: 240px;
+    height: 140px;
+}
+
+.star {
+    height: 20px
+}
+
+#restaurant-details > h4, .rating-and-delivery-time > h4 {
+    margin: 0;
+    padding: 3px 0px 0px 5px;
+}
+
+.rating-and-delivery-time {
+    display: flex;
+    justify-content: start;
+}
+
+.restaurant-card {
+    width: 250px;
+}
+
+h2 {
+    padding: 0px 75px;
+    color: rebeccapurple;
+}
