@@ -13,9 +13,6 @@
     border: 1px solid whitesmoke;
     border-radius: 5px;
     background: #c8bbee;
-    /* position: fixed;
-    width: 100%;
-    top: 0; */
 }
 
 .logo-container {
@@ -89,9 +86,9 @@ h3 {
 .restaurant-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    padding: 0px 60px;
-    justify-content: space-around;
+    gap: 21px;
+    margin: 0px 100px;
+    justify-content: start;
 }
 
 .restaurant-img:hover {
@@ -121,4 +118,22 @@ h3 {
 h2 {
     padding: 0px 75px;
     color: rebeccapurple;
+}
+
+.filter {
+    margin: 15px 100px;
+}
+
+.filter-btn {
+    padding: 10px;
+    border-radius: 8px;
+    width: 16%;
+    font-size: 15px;
+    font-family: math;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.filter-btn:hover {
+    cursor: pointer;
 }
