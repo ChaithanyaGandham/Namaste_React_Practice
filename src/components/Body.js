@@ -5,12 +5,13 @@ import { restaurants } from "../utils/mockData";
 import { useState } from "react";
 import Restaurant from "./Restaurant";
 import crossIcon from "../../Images/cross-icon.png";
+import { restaurantList } from "../utils/mockData";
 
 const Body = () => {
 
     const [listOfRestaurants, setListOfRestaurants] = useState(restaurants);
 
-    const filteredList = listOfRestaurants.filter((restaurant) => restaurant.info.avgRating > 4.2);
+    const [topRestaurants, setTopRestaurants] = useState(restaurantList);
 
     const [typedText, setTypedText] = useState("");
 
@@ -30,7 +31,7 @@ const Body = () => {
                 <h2>Top rated Restaurants!</h2>
                 <div className="restaurant-container">
                     {
-                        filteredList.map((restaurant) => <Restaurant key={restaurant.info.id} restaurantList={restaurant}/>)
+                        topRestaurants.map((restaurant) => <Restaurant key={restaurant.info.id} restaurantList={restaurant}/>)
                     }
                </div>
             </div>
