@@ -4,12 +4,15 @@ import burger from "../../Images/burger.png";
 import { restaurants } from "../utils/mockData";
 import { useState } from "react";
 import Restaurant from "./Restaurant";
+import crossIcon from "../../Images/cross-icon.png";
 
 const Body = () => {
 
     const [listOfRestaurants, setListOfRestaurants] = useState(restaurants);
 
     const filteredList = listOfRestaurants.filter((restaurant) => restaurant.info.avgRating > 4.2);
+
+    const [typedText, setTypedText] = useState("");
 
     return (
         <div className="body">
@@ -34,14 +37,32 @@ const Body = () => {
             <div className="restaurantList">
                <h2>Restaurants with online food delivery</h2>
                <div className="filter">
-                <button className="filter-btn"
-                    onClick={() => {
-                        const filteredList = listOfRestaurants.filter((restaurant) => restaurant.info.avgRating > 4);
-                        setListOfRestaurants(filteredList);
-                    }}
-                >
-                filter
-                </button>
+                    <div className="search-bar">
+                        <input type="text" className="search-bar" value={typedText}
+                            onBlur={(input) => {
+                                const filteredList = listOfRestaurants.filter((restaurant) => restaurant?.info?.name.toLowerCase().includes(input.target.value.toLowerCase()));
+                                setListOfRestaurants(filteredList);
+                            }}
+
+                            onChange={(input) => {
+                                setTypedText(input.target.value);
+                            }}
+                        />
+                        <img src={crossIcon} className="cross-icon" alt="cross-icon"
+                            onClick={() => {
+                                setTypedText("");
+                                setListOfRestaurants(restaurants);
+                            }}
+                        />
+                    </div>
+                    <button className="filter-btn"
+                        onClick={() => {
+                            const filteredList = listOfRestaurants.filter((restaurant) => restaurant.info.avgRating > 4);
+                            setListOfRestaurants(filteredList);
+                        }}
+                    >
+                    filter
+                    </button>
                </div>
                <div className="restaurant-container">
                     {
